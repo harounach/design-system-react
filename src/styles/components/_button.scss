@@ -1,0 +1,125 @@
+@use "../abstracts/variables" as vars;
+
+// btn
+.btn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 1rem;
+  color: vars.$black;
+  background-color: vars.$white;
+  border: 1px solid vars.$white;
+  outline: 3px solid transparent;
+  transition: all 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: vars.$gray30;
+  }
+
+  &:focus {
+    outline: 3px solid vars.$blue-lighter;
+  }
+
+  // btn--primary
+  &--primary {
+    background-color: vars.$primary;
+    color: vars.$white;
+    border-color: vars.$primary;
+
+    &:hover,
+    &:focus {
+      background-color: vars.$primary-dark;
+    }
+  }
+
+  // btn--secondary
+  &--secondary {
+    background-color: vars.$secondary;
+    color: vars.$white;
+    border-color: vars.$secondary;
+  }
+
+  // btn--full
+  &--full {
+    display: flex;
+  }
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  // btn--search
+  &--search {
+    border-radius: 0 24px 24px 0;
+  }
+
+  // btn__icon
+  &__icon {
+    font-size: 24px;
+  }
+}
+
+// menu-btn
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: none;
+  background-color: transparent;
+
+  span {
+    transition: all 0.3s;
+  }
+
+  // menu-btn__tb
+  &__tb {
+    background-color: vars.$primary;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transform: translateY(0) rotate(0);
+  }
+
+  // menu-btn__mb
+  &__mb {
+    background-color: vars.$primary;
+    width: 80%;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  // menu-btn__bb
+  &__bb {
+    background-color: vars.$primary;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transform: translateY(0) rotate(0);
+  }
+
+  // menu-btn--open
+  &--open {
+    // menu-btn__tb
+    .menu-btn__tb {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    // menu-btn__mb
+    .menu-btn__mb {
+      opacity: 0;
+    }
+
+    // menu-btn__bb
+    .menu-btn__bb {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}

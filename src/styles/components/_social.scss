@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as vars;
+
+// social
+.social {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  // social__link
+  &__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: vars.$white;
+    color: vars.$primary;
+
+    // hover
+    &:hover {
+      background-color: vars.$gray30;
+      color: vars.$primary-dark;
+    }
+
+    // social__link--rounded
+    &--rounded {
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as vars;
+
+// pagination
+.pagination {
+  list-style-type: none;
+  display: inline-flex;
+
+  // pagination__item
+  &__item {
+  }
+
+  // pagination__link
+  &__link {
+    display: flex;
+    padding: 1rem;
+    text-decoration: none;
+    border: 1px solid vars.$white;
+    background-color: vars.$white;
+    color: vars.$black;
+    border-right-color: vars.$gray30;
+    cursor: pointer;
+
+    // hover
+    &:hover {
+      background-color: vars.$gray30;
+      border-color: vars.$gray30;
+    }
+
+    // pagination__link--prev
+    // pagination__link--next
+    // pagination__link--current
+    &--prev,
+    &--next,
+    &--current {
+      background-color: vars.$primary;
+      color: vars.$white;
+      border-color: vars.$primary;
+
+      // hover
+      &:hover {
+        background-color: vars.$primary-dark;
+        border-color: vars.$primary-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@use "sass:color";
+
+// ------------- COLOR --------------------
+// primary
+$primary: #0d6efd;
+$primary-light: color.adjust($primary, $lightness: 30%);
+$primary-lighter: color.adjust($primary, $lightness: 40%);
+$primary-dark: color.adjust($primary, $lightness: -30%);
+$primary-darker: color.adjust($primary, $lightness: -40%);
+
+// secondary
+$secondary: #d63384;
+$secondary-light: color.adjust($secondary, $lightness: 30%);
+$secondary-lighter: color.adjust($secondary, $lightness: 40%);
+$secondary-dark: color.adjust($secondary, $lightness: -30%);
+$secondary-darker: color.adjust($secondary, $lightness: -40%);
+
+// green (sucess)
+$green: #22cc2e;
+$green-light: color.adjust($green, $lightness: 30%);
+$green-lighter: color.adjust($green, $lightness: 40%);
+$green-dark: color.adjust($green, $lightness: -30%);
+$green-darker: color.adjust($green, $lightness: -40%);
+
+// orange (warning)
+$orange: #d98e1a;
+$orange-light: color.adjust($orange, $lightness: 30%);
+$orange-lighter: color.adjust($orange, $lightness: 40%);
+$orange-dark: color.adjust($orange, $lightness: -30%);
+$orange-darker: color.adjust($orange, $lightness: -40%);
+
+// red (error)
+$red: #e94f4f;
+$red-light: color.adjust($red, $lightness: 30%);
+$red-lighter: color.adjust($red, $lightness: 40%);
+$red-dark: color.adjust($red, $lightness: -30%);
+$red-darker: color.adjust($red, $lightness: -40%);
+
+// blue (info)
+$blue: #1e88d9;
+$blue-light: color.adjust($blue, $lightness: 30%);
+$blue-lighter: color.adjust($blue, $lightness: 40%);
+$blue-dark: color.adjust($blue, $lightness: -30%);
+$blue-darker: color.adjust($blue, $lightness: -40%);
+
+$theme-colors: (
+  // primary
+  "primary": $primary,
+  "primary-light": $primary-light,
+  "primary-lighter": $primary-lighter,
+  "primary-dark": $primary-dark,
+  "primary-darker": $primary-darker,
+
+  // secondary
+  "secondary": $secondary,
+  "secondary-light": $secondary-light,
+  "secondary-lighter": $secondary-lighter,
+  "secondary-dark": $secondary-dark,
+  "secondary-darker": $secondary-darker,
+
+  // green (sucess)
+  "green": $green,
+  "green-light": $green-light,
+  "green-lighter": $green-lighter,
+  "green-dark": $green-dark,
+  "green-darker": $green-darker,
+
+  // orange (warning)
+  "orange": $orange,
+  "orange-light": $orange-light,
+  "orange-lighter": $orange-lighter,
+  "orange-dark": $orange-dark,
+  "orange-darker": $orange-darker,
+
+  // red (error)
+  "red": $red,
+  "red-light": $red-light,
+  "red-lighter": $red-lighter,
+  "red-dark": $red-dark,
+  "red-darker": $red-darker,
+
+  // blue (info)
+  "blue": $blue,
+  "blue-light": $blue-light,
+  "blue-lighter": $blue-lighter,
+  "blue-dark": $blue-dark,
+  "blue-darker": $blue-darker
+);
+
+// Gray Colors
+$black: #000000;
+$gray90: #212529;
+$gray80: #343a40;
+$gray70: #495057;
+$gray60: #6c757d;
+$gray50: #adb5bd;
+$gray40: #ced4da;
+$gray30: #dee2e6;
+$gray20: #e9ecef;
+$gray10: #f8f9fa;
+$white: #ffffff;
+
+$grays: (
+  "black": $black,
+  "gray90": $gray90,
+  "gray80": $gray80,
+  "gray70": $gray70,
+  "gray60": $gray60,
+  "gray50": $gray50,
+  "gray40": $gray40,
+  "gray30": $gray30,
+  "gray20": $gray20,
+  "gray10": $gray10,
+  "white": $white,
+);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$grid-columns: 12;
+
+$spaces: (
+  "0": 0,
+  "05": 0.5rem,
+  "1": 1rem,
+  "15": 1.5rem,
+  "2": 2rem,
+  "3": 3rem,
+);
+
+$sizes: (
+  // width
+  "w":
+    (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  // height
+  "h":
+    (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  // max-width
+  "mw":
+    (
+      100: 100%,
+    ),
+  // max-height
+  "mh":
+    (
+      100: 100%,
+    )
+);
+
+$z-indexes: (
+  "none": 0,
+  "appbar": 12,
+  "carousel": 10,
+);

@@ -1,0 +1,85 @@
+@use "sass:map";
+@use "../abstracts/variables" as vars;
+
+// padding
+@each $space in map.keys(vars.$spaces) {
+  .p-#{$space} {
+    padding: map.get(vars.$spaces, $space);
+  }
+
+  .px-#{$space} {
+    padding-left: map.get(vars.$spaces, $space);
+    padding-right: map.get(vars.$spaces, $space);
+  }
+
+  .py-#{$space} {
+    padding-top: map.get(vars.$spaces, $space);
+    padding-bottom: map.get(vars.$spaces, $space);
+  }
+
+  .pt-#{$space} {
+    padding-top: map.get(vars.$spaces, $space);
+  }
+
+  .pr-#{$space} {
+    padding-right: map.get(vars.$spaces, $space);
+  }
+
+  .pb-#{$space} {
+    padding-bottom: map.get(vars.$spaces, $space);
+  }
+
+  .pl-#{$space} {
+    padding-left: map.get(vars.$spaces, $space);
+  }
+}
+
+// margin
+@each $space in map.keys(vars.$spaces) {
+  .m-#{$space} {
+    margin: map.get(vars.$spaces, $space);
+  }
+
+  .mx-#{$space} {
+    margin-left: map.get(vars.$spaces, $space);
+    margin-right: map.get(vars.$spaces, $space);
+  }
+
+  .my-#{$space} {
+    margin-top: map.get(vars.$spaces, $space);
+    margin-bottom: map.get(vars.$spaces, $space);
+  }
+
+  .mt-#{$space} {
+    margin-top: map.get(vars.$spaces, $space);
+  }
+
+  .mr-#{$space} {
+    margin-right: map.get(vars.$spaces, $space);
+  }
+
+  .mb-#{$space} {
+    margin-bottom: map.get(vars.$spaces, $space);
+  }
+
+  .ml-#{$space} {
+    margin-left: map.get(vars.$spaces, $space);
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}

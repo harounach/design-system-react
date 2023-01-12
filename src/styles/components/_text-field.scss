@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as vars;
+
+// text-field
+.text-field {
+  min-width: 200px;
+  height: 40px;
+  padding-left: 1rem;
+  border: 1px solid vars.$gray40;
+  font-size: 14px;
+  outline: 3px solid transparent;
+  transition: all 0.3s;
+  &:focus {
+    outline: 3px solid vars.$blue-lighter;
+  }
+
+  // text-field--search
+  &--search {
+    border-radius: 24px 0 0 24px;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}

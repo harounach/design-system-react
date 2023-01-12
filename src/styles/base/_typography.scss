@@ -1,0 +1,75 @@
+@use "sass:map";
+@use "../abstracts/variables" as vars;
+
+// Types -------------------------
+// display1
+.display1 {
+  font-size: 96px;
+}
+
+// display2
+.display2 {
+  font-size: 60px;
+}
+
+// display3
+.display3 {
+  font-size: 48px;
+}
+
+// display4
+.display4 {
+  font-size: 34px;
+}
+
+// display5
+.display5 {
+  font-size: 24px;
+}
+
+// display6
+.display6 {
+  font-size: 20px;
+}
+
+// h1
+.h1 {
+  font-size: 40px;
+}
+
+// h2
+.h2 {
+  font-size: 32px;
+}
+
+// h3
+.h3 {
+  font-size: 28px;
+}
+
+// h4
+.h4 {
+  font-size: 24px;
+}
+
+// h5
+.h5 {
+  font-size: 20px;
+}
+
+// h6
+.h6 {
+  font-size: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.muted {
+  color: vars.$gray60;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}

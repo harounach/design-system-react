@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "../abstracts/variables" as vars;
+
+// Generate theme text colors
+@each $color in map.keys(vars.$theme-colors) {
+  .text-#{$color} {
+    color: map.get(vars.$theme-colors, $color);
+  }
+}
+
+// Generate theme background colors
+@each $color in map.keys(vars.$theme-colors) {
+  .bg-#{$color} {
+    background-color: map.get(vars.$theme-colors, $color);
+  }
+}
+
+// generate gray text colors
+@each $color in map.keys(vars.$grays) {
+  .text-#{$color} {
+    color: map.get(vars.$grays, $color);
+  }
+}
+
+// generate gray background colors
+@each $color in map.keys(vars.$grays) {
+  .bg-#{$color} {
+    background-color: map.get(vars.$grays, $color);
+  }
+}
