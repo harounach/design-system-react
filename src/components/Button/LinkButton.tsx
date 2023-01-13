@@ -1,8 +1,9 @@
 import React from "react";
 import classNames from "classnames";
+
 import { BaseProps } from "../../interfaces/BaseProps";
 
-interface ButtonProps extends BaseProps {
+interface LinkButtonProps extends BaseProps {
   onClick?: () => void;
   primary?: boolean;
   secondary?: boolean;
@@ -10,9 +11,10 @@ interface ButtonProps extends BaseProps {
   full?: boolean;
   search?: boolean;
   label?: string;
+  url?: string;
 }
 
-const Button = ({
+const LinkButton = ({
   children,
   label,
   primary,
@@ -20,9 +22,10 @@ const Button = ({
   center,
   full,
   search,
+  url,
   customclasses,
   ...props
-}: ButtonProps) => {
+}: LinkButtonProps) => {
   const classes = classNames(
     "btn",
     {
@@ -35,10 +38,10 @@ const Button = ({
     customclasses
   );
   return (
-    <button className={classes} {...props}>
+    <a href={url} className={classes} {...props}>
       {children}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default LinkButton;

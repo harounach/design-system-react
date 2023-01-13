@@ -5,16 +5,18 @@
   display: inline-flex;
   align-items: center;
   height: 40px;
-  padding: 1rem;
+  padding: 0 1rem;
   color: vars.$black;
   background-color: vars.$white;
   border: 1px solid vars.$white;
   outline: 3px solid transparent;
   transition: all 0.3s;
   text-decoration: none;
+  font-size: 1rem;
   cursor: pointer;
 
   &:hover {
+    border-color: vars.$gray30;
     background-color: vars.$gray30;
   }
 
@@ -28,8 +30,8 @@
     color: vars.$white;
     border-color: vars.$primary;
 
-    &:hover,
-    &:focus {
+    &:hover {
+      border-color: vars.$primary-dark;
       background-color: vars.$primary-dark;
     }
   }
@@ -39,11 +41,17 @@
     background-color: vars.$secondary;
     color: vars.$white;
     border-color: vars.$secondary;
+
+    &:hover {
+      background-color: vars.$secondary-dark;
+      border-color: vars.$secondary-dark;
+    }
   }
 
   // btn--full
   &--full {
     display: flex;
+    width: 100%;
   }
 
   &--center {
