@@ -3,32 +3,38 @@ import classNames from "classnames";
 
 import { BaseProps } from "../../interfaces/BaseProps";
 
-// TODO: complete Flex
-type Display = "flex" | "inline-flex";
-type Direction = "row" | "row-reverse" | "column" | "column-reverse";
-type Wrap = "wrap" | "nowrap" | "wrap-reverse";
-type Justify = "start" | "end" | "center" | "between" | "around";
-type AlignItems = "start" | "end" | "center" | "baseline" | "stretch";
+// Flex
+type Flex = "1" | "auto" | "grow-0" | "shrink-0";
+// Align self
+type AlignSelf = "auto" | "start" | "end" | "center" | "baseline" | "stretch";
+// Order
+type Order = "1" | "2" | "none";
 
 interface FlexItemProps extends BaseProps {
-  display: Display;
-  direction?: Direction;
-  wrap?: Wrap;
-  justify?: Justify;
-  alignItems?: AlignItems;
+  flex?: Flex;
+  alignSelf?: AlignSelf;
+  order?: Order;
 }
 
 const FlexItem = ({
   children,
-  display,
-  direction,
-  wrap,
-  justify,
-  alignItems,
+  flex,
+  alignSelf,
+  order,
   customclasses,
   ...props
 }: FlexItemProps) => {
-  const classes = classNames("d-flex", customclasses);
+  const classes = classNames(
+    {
+      // Flex
+      [`flex-${flex}`]: flex,
+      // Align self
+      [`flex-self-${alignSelf}`]: alignSelf,
+      // Order
+      [`flex-order-${order}`]: order,
+    },
+    customclasses
+  );
   return (
     <div className={classes} {...props}>
       {children}

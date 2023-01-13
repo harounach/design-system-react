@@ -8,6 +8,7 @@ import Grid from "./components/Grid/Grid";
 import Column from "./components/Grid/Column";
 import Box from "./components/Box/Box";
 import Flex from "./components/Flex/Flex";
+import FlexItem from "./components/Flex/FlexItem";
 
 function App() {
   return (
@@ -95,9 +96,15 @@ function App() {
           <h2>Flexbox</h2>
           <div>
             <Flex display="flex" wrap="wrap">
-              <Box customclasses="p-2">Box 1</Box>
-              <Box customclasses="p-2">Box 1</Box>
-              <Box customclasses="p-2">Box 1</Box>
+              <FlexItem flex="1">
+                <Box customclasses="p-2">Box 1</Box>
+              </FlexItem>
+              <FlexItem order="2">
+                <Box customclasses="p-2">Box 2</Box>
+              </FlexItem>
+              <FlexItem alignSelf="end">
+                <Box customclasses="p-2">Box 3</Box>
+              </FlexItem>
             </Flex>
           </div>
         </section>
