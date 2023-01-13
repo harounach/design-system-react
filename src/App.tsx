@@ -7,6 +7,7 @@ import Icon from "./components/Button/Icon";
 import Grid from "./components/Grid/Grid";
 import Column from "./components/Grid/Column";
 import Box from "./components/Box/Box";
+import Flex from "./components/Flex/Flex";
 
 function App() {
   return (
@@ -87,6 +88,17 @@ function App() {
                 <Box customclasses="p-2">Box 4</Box>
               </Column>
             </Grid>
+          </div>
+        </section>
+
+        <section>
+          <h2>Flexbox</h2>
+          <div>
+            <Flex display="flex" wrap="wrap">
+              <Box customclasses="p-2">Box 1</Box>
+              <Box customclasses="p-2">Box 1</Box>
+              <Box customclasses="p-2">Box 1</Box>
+            </Flex>
           </div>
         </section>
       </section>

@@ -3,8 +3,6 @@ import classNames from "classnames";
 
 import { BaseProps } from "../../interfaces/BaseProps";
 
-// TODO: complete Column
-
 type Col = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 type ColSM = Col;
 type ColMD = Col;
