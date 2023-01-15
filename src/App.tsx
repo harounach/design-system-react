@@ -1,6 +1,14 @@
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Appbar from "./components/Appbar/Appbar";
+import AppbarBrand from "./components/Appbar/AppbarBrand";
+import AppbarNav from "./components/Appbar/AppbarNav";
+import AppbarItems from "./components/Appbar/AppbarItems";
+import AppbarItem from "./components/Appbar/AppbarItem";
+import MenuButton from "./components/Button/MenuButton";
+import AppbarLink from "./components/Appbar/AppbarLink";
+import AppbarMenu from "./components/Appbar/AppbarMenu";
+import SearchForm from "./components/SearchForm/SearchForm";
 import Button from "./components/Button/Button";
 import LinkButton from "./components/Button/LinkButton";
 import Icon from "./components/Button/Icon";
@@ -14,7 +22,77 @@ function App() {
   return (
     <div>
       <section>
-        <Appbar />
+        <Appbar customclasses="mb-15">
+          <AppbarBrand customclasses="appbar__brand" />
+          <MenuButton customclasses="appbar__menu" />
+          <AppbarNav>
+            <AppbarItems>
+              <AppbarItem>
+                <AppbarLink label="Link 1" url="#" />
+              </AppbarItem>
+
+              <AppbarItem>
+                <AppbarLink label="Link 2" url="#" />
+              </AppbarItem>
+
+              {/* Dropdown */}
+              <AppbarItem dropdown>
+                <AppbarLink label="Link 3" toggle url="#" />
+
+                <AppbarMenu>
+                  <AppbarItem>
+                    <AppbarLink label="Sublink 1" url="#" />
+                  </AppbarItem>
+
+                  {/* Dropdown */}
+                  <AppbarItem dropdown>
+                    <AppbarLink label="Sublink 2" toggle url="#" />
+
+                    <AppbarMenu>
+                      {/* Dropdown */}
+                      <AppbarItem dropdown>
+                        <AppbarLink label="Sub Sublink 1" toggle url="#" />
+                        <AppbarMenu>
+                          <AppbarItem>
+                            <AppbarLink label="Sub sub sublink 1" url="#" />
+                          </AppbarItem>
+                          <AppbarItem>
+                            <AppbarLink label="Sub sub sublink 2" url="#" />
+                          </AppbarItem>
+                          <AppbarItem>
+                            <AppbarLink label="Sub sub sublink 3" url="#" />
+                          </AppbarItem>
+                        </AppbarMenu>
+                      </AppbarItem>
+
+                      <AppbarItem>
+                        <AppbarLink label="Sub Sublink 2" url="#" />
+                      </AppbarItem>
+
+                      <AppbarItem>
+                        <AppbarLink label="Sub Sublink 3" url="#" />
+                      </AppbarItem>
+                    </AppbarMenu>
+                  </AppbarItem>
+
+                  <AppbarItem>
+                    <AppbarLink label="Sublink 3" url="#" />
+                  </AppbarItem>
+
+                  <AppbarItem>
+                    <AppbarLink label="Sublink 4" url="#" />
+                  </AppbarItem>
+                </AppbarMenu>
+              </AppbarItem>
+
+              <AppbarItem>
+                <AppbarLink label="Link 4" url="#" />
+              </AppbarItem>
+            </AppbarItems>
+            {/* Search form */}
+            <SearchForm customclasses="appbar__search" />
+          </AppbarNav>
+        </Appbar>
       </section>
       <section className="container p-1">
         <section>
