@@ -3,6 +3,8 @@ import classNames from "classnames";
 
 import { BaseProps } from "../../interfaces/BaseProps";
 
+import Container from "../Container/Container";
+
 interface AppbarProps extends BaseProps {}
 
 const Appbar = ({ children, customclasses }: AppbarProps) => {
@@ -10,9 +12,9 @@ const Appbar = ({ children, customclasses }: AppbarProps) => {
 
   return (
     <header className={classes}>
-      <div className="container">
+      <Container>
         <div className="appbar__content">{children}</div>
-      </div>
+      </Container>
     </header>
   );
 };
